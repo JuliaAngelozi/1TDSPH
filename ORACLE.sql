@@ -1,0 +1,10 @@
+CREATE TABLE RM556364_PAIS(ID_PAIS NUMBER PRIMARY KEY,
+                              NOME_PAIS VARCHAR(30)NOT NULL);
+                              
+CREATE TABLE RM556364_ESTADO (ID_ESTADO NUMBER PRIMARY KEY, 
+                          NOME_ESTADO VARCHAR(30) NOT NULL,
+                          ID_PAIS NUMBER);
+                          
+ALTER TABLE RM556364_ESTADO ADD CONSTRAINT FK_ESTADOEEEE FOREIGN KEY
+(ID_PAIS) REFERENCES RM556364_PAIS(ID_PAIS);
+                              
